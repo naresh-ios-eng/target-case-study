@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ActionView: UIView {
+/// This class is used to add action to any view. The action must be defined in the Action enum
+final class ActionView: UIView {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var actionsStackView: UIStackView!

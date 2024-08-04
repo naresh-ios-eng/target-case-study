@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// This class is responsible to get the product list and details from the apis server.
 final class ProductApiServiceProvider: ProductApiServiceProvidable {
     
     /// This function will fetch the product list from server and provide this to the called in async fashion

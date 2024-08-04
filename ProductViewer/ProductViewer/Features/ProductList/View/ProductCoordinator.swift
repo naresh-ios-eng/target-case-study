@@ -10,14 +10,19 @@ import UIKit
 
 final class ProductCoordinator: ProductCoordinatable {
     
+    /// The coordinators those are route from this coordinator.
     var childCoordinators: [Coordinator] = []
     
+    /// The navigation controller object to navigate to some controller.
     var navigationController: UINavigationController
     
+    /// This initialised to initialise the class with navigation controller.
+    /// - Parameter navigationController: object of navigation controller.
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
+    /// This start method would be the entry point for any coordinater. It sepecifies the origin of the navigation.
     func start() {
         let serviceProvider = ProductApiServiceProvider()
         let viewModel = ProductListViewModel(apiServiceProvider: serviceProvider)
@@ -29,10 +34,14 @@ final class ProductCoordinator: ProductCoordinatable {
         self.navigationController.pushViewController(viewController, animated: true)
     }
     
+    /// Going back to previous controller.
     func navigateBack() {
         self.navigationController.popViewController(animated: true)
     }
     
+    
+    /// This function would open the product detail screen.
+    /// - Parameter product: product model.
     func openProductDetail(for product: ProductModel) {
         let serviceProvider = ProductApiServiceProvider()
         let viewModel = ProductDetailViewModel(product: product, apiServiceProvider: serviceProvider)

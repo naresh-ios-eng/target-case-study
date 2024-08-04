@@ -82,29 +82,39 @@ extension ProductDetailViewController: UITableViewDataSource, UITableViewDelegat
 
 //MARK: - ViewInteractionDelegate -
 extension ProductDetailViewController: ViewInteractionDelegate {
+    /// This function will be used to show / hide the loading indicator on controller when a aysn task started on view model side.
+    /// - Parameter loading: true means show loader, false means hide loader.
     func show(loading: Bool) {
         if loading {
-            self.loaderProvidable.present(sender: self.view)
+            loaderProvidable.present(sender: self.view)
         } else {
-            self.loaderProvidable.dismiss(sender: self.view)
+            loaderProvidable.dismiss(sender: self.view)
         }
     }
     
+    /// This function is used to reload the table or collectionview.
     func reloadUserInterface() {
         self.tableView.reloadData()
     }
     
+    /// This function we can use to show an error popup or toast based on requirement.
+    /// - Parameter error: the error message we need to show.
     func show(error: String) {
-        
+        /// show alert or toast
     }
     
+    /// This function we can use to show an success popup or toast based on requirement.
+    /// - Parameter success: the success message we need to show.
     func show(success: String) {
-        
+        /// show alert or toast
     }
 }
 
 // MARK: - ActionViewDelegate -
 extension ProductDetailViewController: ActionViewDelegate {
+    
+    /// This function would be triggered when the user tap on any action from detail screen. E,g Add to cart, add to watchlist, Buy now etc.
+    /// - Parameter action: The type of action like Add to cart, add to watchlist, Buy now etc.
     func didTriggeredAction(action: Action) {
         self.viewModel.didTriggeredAction(action: action)
     }

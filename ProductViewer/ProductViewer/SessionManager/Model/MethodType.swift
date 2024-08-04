@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// Api methid type.
+/// MethodType 
 public enum MethodType: String, CaseIterable {
     case get = "GET"
     case post = "POST"

@@ -140,6 +140,8 @@ extension ProductListViewController: UICollectionViewDataSource {
 // MARK: -  -
 extension ProductListViewController: ViewInteractionDelegate {
     
+    /// This function will be used to show / hide the loading indicator on controller when a aysn task started on view model side.
+    /// - Parameter loading: true means show loader, false means hide loader.
     func show(loading: Bool) {
         if loading {
             loaderProvidable.present(sender: self.view)
@@ -148,13 +150,20 @@ extension ProductListViewController: ViewInteractionDelegate {
         }
     }
     
+    /// This function is used to reload the table or collectionview.
     func reloadUserInterface() {
         self.collectionView.reloadData()
     }
     
+    /// This function we can use to show an error popup or toast based on requirement.
+    /// - Parameter error: the error message we need to show.
     func show(error: String) {
+        /// show alert or toast
     }
     
+    /// This function we can use to show an success popup or toast based on requirement.
+    /// - Parameter success: the success message we need to show.
     func show(success: String) {
+        /// show alert or toast
     }
 }

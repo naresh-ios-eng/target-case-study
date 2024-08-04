@@ -28,6 +28,7 @@ public protocol Routable {
 // MARK: - Building Request -
 extension Routable {
     
+    /// Setting the default headers those will get included in all api's
     var defaultHeaders: [String: String]? {
         ["Content-Type": "Application/Json"]
     }

@@ -23,3 +23,11 @@ enum Action: Int {
         
     }
 }
+
+/// This protocol provide a comunication between ActionView and it's container.
+protocol ActionViewDelegate: AnyObject {
+    
+    /// This function would be triggered when the user tap on any action from detail screen. E,g Add to cart, add to watchlist, Buy now etc.
+    /// - Parameter action: The type of action like Add to cart, add to watchlist, Buy now etc.
+    func didTriggeredAction(action: Action)
+}

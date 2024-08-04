@@ -45,7 +45,7 @@ final public class SessionManager: NSObject {
     ///   - responseType: response type
     /// - Returns: desription
     public func dataTask<T: Codable>(route: Routable, responseType: T.Type) async throws -> T {
-        
+        /// Making the URL request.
         let urlRequest: URLRequest = try route.urlRequest(enviroment: self.enviroment)
         let (data, response) = try await session.data(for: urlRequest)
         guard let httpStatusCode = (response as? HTTPURLResponse)?.statusCode else {
@@ -70,44 +70,5 @@ final public class SessionManager: NSObject {
             /// **As of now I am just throwing error, request interceptor would be introduced for retry machanism**
             throw SessionError.authorizationFailed
         }
-    }
-    
-    //MARK: - COMBINE VERSION OF THE API HANDLER -
-    
-    /// This function will hit api and return the response in provided format
-    /// - Parameters:
-    ///   - route: api route information
-    ///   - responseType: response type
-    /// - Returns: desription
-    public func dataTask<T: Codable>(route: Routable, responseType: T.Type, completion: @escaping (Result<T, SessionError>) -> Void) throws {
-        guard let urlRequest: URLRequest = try? route.urlRequest(enviroment: self.enviroment) else {
-            completion(.failure(SessionError.invalidRequest))
-            return
-        }
-        let pub = session
-            .dataTaskPublisher(for: urlRequest)
-            .retry(3)
-        cancellable = pub
-            .receive(on: RunLoop.main) /// This will sent the call back in the main queue
-            .tryMap({ (data: Data, response: URLResponse) in
-                guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
-                    /// Need to throw this error because it is not appropriate to show error on any arbitrary screen.
-                    throw SessionError.internalServerError
-                }
-                if statusCode == 200 {
-                    return data
-                } else {
-                    /// we need to handle the data other error codes e.g. in case of 401 we need to refresh the token and make the api call again.
-                    /// as of now we are throwing error.
-                    let message = HTTPURLResponse.localizedString(forStatusCode: statusCode)
-                    throw SessionError.error(code: statusCode, message: message)
-                }
-            })
-            .decode(type: responseType, decoder: JSONDecoder())
-            .sink(receiveCompletion: { error in
-                completion(.failure(SessionError.parsingError))
-            }, receiveValue: { response in
-                completion(.success(response))
-            })
     }
 }
