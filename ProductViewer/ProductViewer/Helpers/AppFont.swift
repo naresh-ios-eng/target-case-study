@@ -3,7 +3,6 @@
 //
 import UIKit
 
-
 enum AppFont {
     /// For each font family in the app we can create corresponding enum.
     enum SFPro {

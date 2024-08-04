@@ -56,7 +56,7 @@
 		64EE2DD72C5EA007009ADD3E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 64EE2DD62C5EA007009ADD3E /* Kingfisher */; };
 		96D6F5F6280EE0C0009338BF /* Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6F5F5280EE0C0009338BF /* Autolayout.swift */; };
 		96D6F5FD280F47B0009338BF /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6F5FB280F47B0009338BF /* UIColor+Helpers.swift */; };
-		96D6F5FE280F47B0009338BF /* UIFont+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6F5FC280F47B0009338BF /* UIFont+Helpers.swift */; };
+		96D6F5FE280F47B0009338BF /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6F5FC280F47B0009338BF /* AppFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,7 +121,7 @@
 		9636D41727FF77E700FE8106 /* ProductViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D6F5F5280EE0C0009338BF /* Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autolayout.swift; sourceTree = "<group>"; };
 		96D6F5FB280F47B0009338BF /* UIColor+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
-		96D6F5FC280F47B0009338BF /* UIFont+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Helpers.swift"; sourceTree = "<group>"; };
+		96D6F5FC280F47B0009338BF /* AppFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,7 +390,7 @@
 			children = (
 				64EE2DCB2C5E9029009ADD3E /* ReusableViews */,
 				96D6F5FB280F47B0009338BF /* UIColor+Helpers.swift */,
-				96D6F5FC280F47B0009338BF /* UIFont+Helpers.swift */,
+				96D6F5FC280F47B0009338BF /* AppFont.swift */,
 				96D6F5F5280EE0C0009338BF /* Autolayout.swift */,
 				646D05042C5D49EF00163948 /* CommonProtocols.swift */,
 				64EE2DA82C5DF67E009ADD3E /* AppCoordinator.swift */,
@@ -533,7 +533,7 @@
 				6495B3F72C5BF17E00A21053 /* MethodType.swift in Sources */,
 				6495B3FF2C5BFCC300A21053 /* ProductDetailViewModel.swift in Sources */,
 				646D05002C5D460500163948 /* ProductListItem.swift in Sources */,
-				96D6F5FE280F47B0009338BF /* UIFont+Helpers.swift in Sources */,
+				96D6F5FE280F47B0009338BF /* AppFont.swift in Sources */,
 				6495B3FA2C5BF17E00A21053 /* SessionError.swift in Sources */,
 				64EE2DAB2C5DF6F2009ADD3E /* AppNavigator.swift in Sources */,
 				64EE2DD02C5E907C009ADD3E /* ActionView.swift in Sources */,
