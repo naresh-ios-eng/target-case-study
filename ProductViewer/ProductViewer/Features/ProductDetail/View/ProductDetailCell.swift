@@ -45,14 +45,14 @@ class ProductDetailCell: UITableViewCell {
         self.productImageView.layer.masksToBounds = true
         self.productImageView.contentMode = .scaleAspectFit
         
-        self.titleLabel.font = UIFont.Details.title
+        self.titleLabel.font = AppFont.SFPro.regular(18).font
         self.titleLabel.textColor = .black
         
-        self.headingLabel.font = UIFont.Details.emphasis
+        self.headingLabel.font = AppFont.SFPro.bold(18).font
         self.headingLabel.textColor = .black
         self.headingLabel.numberOfLines = 0
         
-        self.descriptionLabel.font = UIFont.Details.copy2
+        self.descriptionLabel.font = AppFont.SFPro.regular(16).font
         self.descriptionLabel.textColor = .grayMedium
         self.descriptionLabel.numberOfLines = 0 
     }

@@ -3,30 +3,26 @@
 //
 import UIKit
 
-extension UIFont {
-    static var small: UIFont {
-        UIFont(name: "helvetica", size: 12.0) ?? UIFont.systemFont(ofSize: 12.0)
-    }
 
-    static var medium: UIFont {
-        UIFont(name: "helvetica", size: 14.0) ?? UIFont.systemFont(ofSize: 14.0)
-    }
-
-    static var largeBold: UIFont {
-        UIFont(name: "helvetica-bold", size: 21.0) ?? UIFont.boldSystemFont(ofSize: 21.0)
-    }
-    
-    enum Details {
-        static var title: UIFont {
-            UIFont(name: "helvetica", size: 18.0) ?? UIFont.systemFont(ofSize: 18.0)
-        }
+enum AppFont {
+    /// For each font family in the app we can create corresponding enum.
+    enum SFPro {
+        /// This will create a font with regular face and the size we can pass at runtime.
+        case regular(CGFloat)
+        /// This will create a font with bold face and the size we can pass at runtime.
+        case bold(CGFloat)
+        /// This will create a font with medium face and the size we can pass at runtime.
+        case medium(CGFloat)
         
-        static var emphasis: UIFont {
-            UIFont(name: "helvetica-bold", size: 18.0) ?? UIFont.boldSystemFont(ofSize: 18.0)
-        }
-        
-        static var copy2: UIFont {
-            UIFont(name: "helvetica", size: 16.0) ?? UIFont.systemFont(ofSize: 16.0)
+        var font: UIFont {
+            switch self {
+            case .bold(let size):
+                UIFont(name: "SFPro-Bold", size: size) ?? UIFont.systemFont(ofSize: size)
+            case .regular(let size):
+                UIFont(name: "SFPro-Regular", size: size) ?? UIFont.systemFont(ofSize: size)
+            case .medium(let size):
+                UIFont(name: "SFPro-Medium", size: size) ?? UIFont.systemFont(ofSize: size)
+            }
         }
     }
 }

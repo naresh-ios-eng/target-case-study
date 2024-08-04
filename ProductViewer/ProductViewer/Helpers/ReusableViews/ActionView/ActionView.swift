@@ -46,9 +46,9 @@ final class ActionView: UIView {
             let button = UIButton.init()
             button.tag = action.rawValue
             button.setTitle(action.title, for: .normal)
-            button.titleLabel?.font = UIFont.Details.title
-            button.tintColor = .white
-            button.backgroundColor = .targetRed
+            button.titleLabel?.font = action.buttonFont.font
+            button.tintColor = UIColor(hex: action.titleColor)
+            button.backgroundColor = UIColor(hex: action.buttonBackgroundColor) 
             button.addTarget(self, action: #selector(didActionTrigged(sender:)), for: .touchUpInside)
             button.translatesAutoresizingMaskIntoConstraints = false
             self.actionsStackView.addArrangedSubview(button)

@@ -20,7 +20,36 @@ enum Action: Int {
         case.buy:
             "Buy"
         }
-        
+    }
+    
+    /// Color is hexa code
+    var titleColor: Int {
+        switch self {
+        case .addToCart:
+            0xFFFFFF
+        case.buy:
+            0xFFFFFF
+        }
+    }
+    
+    /// Action button background color
+    var buttonBackgroundColor: Int {
+        switch self {
+        case .addToCart:
+            0xCC0000
+        case.buy:
+            0xCC0000
+        }
+    }
+    
+    /// Action button background color
+    var buttonFont: AppFont.SFPro {
+        switch self {
+        case .addToCart:
+            AppFont.SFPro.regular(18)
+        case.buy:
+            AppFont.SFPro.regular(18)
+        }
     }
 }
 

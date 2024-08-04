@@ -10,6 +10,7 @@
 		5B259CCA1D6630E0001D755F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B259CC91D6630E0001D755F /* AppDelegate.swift */; };
 		5B259CD11D6630E0001D755F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B259CD01D6630E0001D755F /* Assets.xcassets */; };
 		5B259CD41D6630E0001D755F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B259CD21D6630E0001D755F /* LaunchScreen.storyboard */; };
+		644AE9102C5FE69E00A5FC8A /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 644AE90F2C5FE69E00A5FC8A /* SF-Pro.ttf */; };
 		645330B62C5F2F4500BD70A0 /* UILabelExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645330B52C5F2F4500BD70A0 /* UILabelExt.swift */; };
 		645330BB2C5F793600BD70A0 /* SessionManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645330BA2C5F793600BD70A0 /* SessionManagerTest.swift */; };
 		645330BF2C5F85D300BD70A0 /* EnviromentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645330BE2C5F85D300BD70A0 /* EnviromentTest.swift */; };
@@ -74,6 +75,7 @@
 		5B259CD01D6630E0001D755F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B259CD31D6630E0001D755F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B259CD51D6630E0001D755F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		644AE90F2C5FE69E00A5FC8A /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		645330B52C5F2F4500BD70A0 /* UILabelExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExt.swift; sourceTree = "<group>"; };
 		645330BA2C5F793600BD70A0 /* SessionManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerTest.swift; sourceTree = "<group>"; };
 		645330BE2C5F85D300BD70A0 /* EnviromentTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviromentTest.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		5B259CC81D6630E0001D755F /* ProductViewer */ = {
 			isa = PBXGroup;
 			children = (
+				644AE90D2C5FE65900A5FC8A /* Resources */,
 				6495B3EA2C5BF0DC00A21053 /* SessionManager */,
 				64EB2A932C5959F200593C1A /* Features */,
 				96D6F5F4280EE0B2009338BF /* Helpers */,
@@ -171,6 +174,22 @@
 				5B259CD51D6630E0001D755F /* Info.plist */,
 			);
 			path = ProductViewer;
+			sourceTree = "<group>";
+		};
+		644AE90D2C5FE65900A5FC8A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				644AE90E2C5FE66000A5FC8A /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		644AE90E2C5FE66000A5FC8A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				644AE90F2C5FE69E00A5FC8A /* SF-Pro.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		645330B92C5F792100BD70A0 /* SessionManagerTest */ = {
@@ -474,6 +493,7 @@
 				64EE2DCF2C5E907C009ADD3E /* ActionView.xib in Resources */,
 				64EE2DC02C5E25DD009ADD3E /* ProductDetailCell.xib in Resources */,
 				5B259CD41D6630E0001D755F /* LaunchScreen.storyboard in Resources */,
+				644AE9102C5FE69E00A5FC8A /* SF-Pro.ttf in Resources */,
 				5B259CD11D6630E0001D755F /* Assets.xcassets in Resources */,
 				64EE2DB22C5E0090009ADD3E /* Loader.xib in Resources */,
 				64EE2DB82C5E12D3009ADD3E /* ProductDetailViewController.xib in Resources */,

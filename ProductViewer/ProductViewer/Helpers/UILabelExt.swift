@@ -17,7 +17,7 @@ extension UILabel {
         let priceString = NSAttributedString.init(
             string: productModel.regularPrice?.displayString ?? "",
             attributes: [
-                .font: UIFont.largeBold,
+                .font: AppFont.SFPro.bold(21).font,
                 .foregroundColor: UIColor.targetRed
             ]
         )
@@ -25,7 +25,7 @@ extension UILabel {
         let regPriceString = NSAttributedString.init(
             string: " reg. " + (productModel.regularPrice?.displayString ?? ""),
             attributes: [
-                .font: UIFont.small,
+                .font: AppFont.SFPro.regular(12).font,
                 .foregroundColor: UIColor.grayDarkest
             ]
         )
@@ -33,7 +33,7 @@ extension UILabel {
         let fulfillmentString = NSAttributedString.init(
             string: "\n" + (productModel.fulfillment ?? ""),
             attributes: [
-                .font: UIFont.small,
+                .font: AppFont.SFPro.regular(12).font,
                 .foregroundColor: UIColor.textLightGray
             ]
         )
@@ -53,7 +53,7 @@ extension UILabel {
         let availability = NSAttributedString.init(
             string: productModel.availability?.rawValue ?? "",
             attributes: [
-                .font: UIFont.small,
+                .font: AppFont.SFPro.regular(12).font,
                 .foregroundColor: UIColor.targetTextGreen
             ]
         )
@@ -61,7 +61,7 @@ extension UILabel {
         let aisleString = NSAttributedString.init(
             string: " in aisle " + (productModel.aisle ?? ""),
             attributes: [
-                .font: UIFont.small,
+                .font: AppFont.SFPro.regular(12).font,
                 .foregroundColor: UIColor.textLightGray
             ]
         )

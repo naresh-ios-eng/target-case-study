@@ -55,7 +55,7 @@ final class ProductListItemView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = ""
         label.numberOfLines = 0
-        label.font = UIFont.medium
+        label.font = AppFont.SFPro.medium(14).font
         label.textColor = .black
         return label
     }()
