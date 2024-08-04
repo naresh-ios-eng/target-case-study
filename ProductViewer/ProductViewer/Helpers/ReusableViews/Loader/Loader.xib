@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Loader" customModule="ProductViewer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igY-wf-lco">
+                    <rect key="frame" x="116.66666666666669" y="388.66666666666669" width="160" height="100"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="W8K-Wf-Yd9"/>
+                        <constraint firstAttribute="width" constant="160" id="d8n-t3-pMi"/>
+                    </constraints>
+                </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="d2a-Fq-ZIz">
+                    <rect key="frame" x="186.66666666666666" y="428.66666666666669" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="d2a-Fq-ZIz" firstAttribute="centerY" secondItem="igY-wf-lco" secondAttribute="centerY" id="I0a-zN-Rwx"/>
+                <constraint firstItem="d2a-Fq-ZIz" firstAttribute="centerX" secondItem="igY-wf-lco" secondAttribute="centerX" id="OgL-qd-2lf"/>
+                <constraint firstItem="igY-wf-lco" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="PMV-V1-cNx"/>
+                <constraint firstItem="igY-wf-lco" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="oKm-nI-rQ2"/>
+            </constraints>
+            <connections>
+                <outlet property="activityBackgroundView" destination="igY-wf-lco" id="Qc8-vf-WhS"/>
+                <outlet property="activityIndicatorView" destination="d2a-Fq-ZIz" id="394-Ok-wel"/>
+            </connections>
+            <point key="canvasLocation" x="121" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ActionView" customModule="ProductViewer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="328" height="155"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TyJ-Li-BrX">
+                    <rect key="frame" x="0.0" y="67" width="328" height="46"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0FL-SA-h8c">
+                            <rect key="frame" x="16" y="0.0" width="296" height="46"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="0FL-SA-h8c" firstAttribute="top" secondItem="TyJ-Li-BrX" secondAttribute="top" id="9bh-87-0lL"/>
+                        <constraint firstAttribute="bottom" secondItem="0FL-SA-h8c" secondAttribute="bottom" id="Ed0-5H-LpY"/>
+                        <constraint firstItem="0FL-SA-h8c" firstAttribute="leading" secondItem="TyJ-Li-BrX" secondAttribute="leading" constant="16" id="SD7-27-H4e"/>
+                        <constraint firstAttribute="trailing" secondItem="0FL-SA-h8c" secondAttribute="trailing" constant="16" id="xk1-G2-6zR"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="TyJ-Li-BrX" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="0oN-ew-Auw"/>
+                <constraint firstItem="TyJ-Li-BrX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="AH6-J1-CMJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="TyJ-Li-BrX" secondAttribute="bottom" constant="8" id="HDr-mL-wuf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TyJ-Li-BrX" secondAttribute="trailing" id="V3G-pk-V92"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="actionsStackView" destination="0FL-SA-h8c" id="BCP-9G-kOW"/>
+                <outlet property="containerView" destination="TyJ-Li-BrX" id="PrZ-0f-JPD"/>
+            </connections>
+            <point key="canvasLocation" x="80.916030534351137" y="-55.281690140845072"/>
+        </view>
+    </objects>
+</document>
